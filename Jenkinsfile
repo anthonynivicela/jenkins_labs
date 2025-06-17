@@ -16,7 +16,7 @@ pipeline {
 
        stage('Instalar dependencias') {
     steps {
-        bat 'pip install -r mlops\\Caso1\\requirements.txt'
+        bat 'C:\\Users\\brangovich\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\pip.exe install -r mlops\\requirements.txt'
     }
 }
 
