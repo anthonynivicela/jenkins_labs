@@ -23,7 +23,7 @@ pipeline {
 
 stage('Entrenar modelo') {
     steps {
-        bat 'python mlops\\Caso1\\train_model.py'
+        bat '"C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" mlops\\Caso1\\train_model.py'
     }
 }
 
