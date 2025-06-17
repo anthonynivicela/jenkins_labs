@@ -14,22 +14,22 @@ pipeline {
             }
         }
 
-        stage('Instalar dependencias') {
-            steps {
-                sh 'pip install -r mlops/Caso1/requirements.txt'
-            }
-        }
+       stage('Instalar dependencias') {
+    steps {
+        bat 'pip install -r mlops\\Caso1\\requirements.txt'
+    }
+}
 
-        stage('Entrenar modelo') {
-            steps {
-                sh 'python3 mlops/Caso1/train_model.py'
-            }
-        }
+stage('Entrenar modelo') {
+    steps {
+        bat 'python mlops\\Caso1\\train_model.py'
+    }
+}
 
-        stage('Desplegar API') {
-            steps {
-                sh 'nohup uvicorn mlops_1.api:app --host 0.0.0.0 --port 8000 &'
-            }
-        }
+stage('Desplegar API') {
+    steps {
+        bat 'start /b uvicorn mlops.Caso1.api:app --host 0.0.0.0 --port 8000'
+    }
+}
     }
 }
