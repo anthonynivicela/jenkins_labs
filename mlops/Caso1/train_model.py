@@ -5,7 +5,7 @@ import mlflow
 #import mlflow.pycaret
 
 # Cargar dataset
-df = pd.read_csv("E:\Cloud\OneDrive\Brangovich\Trabajo\Clases\DMC\MachineLearning for data engineer\Edicion 2\Sesion 11\Caso1\credit_risk_multiclass.csv")
+df = pd.read_csv("credit_risk_multiclass.csv")
 
 #Creamos variables
 df["region"] = df["region"].astype("category")
